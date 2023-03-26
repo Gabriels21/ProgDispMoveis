@@ -9,7 +9,7 @@ class App extends Component{
       <View style={{backgroundColor: 'black', height:980}}>
 
             <View style={{alignItems:'center', justifycontetnt: 'center', marginTop: 25}}>
-              <Text style={styles.titulos}>Meu Perfil</Text>
+              <Text style={styles.tituloPrincipal}>Meu Perfil</Text>
             </View>
 
             <View style={{alignItems:'center', justifycontetnt: 'center', marginTop: 25}}>
@@ -50,7 +50,7 @@ class App extends Component{
               <View style={{margin: 5, height:180, backgroundColor: 'black', borderColor:'white', borderWidth:5, borderRadius: 15}}>
                   <Text style={styles.titulosProj}>TCC 
                   </Text>
-                  <Text style={styles.projetos}>https://github.com/Gabriels21/TCC-Trampo-Certo 
+                  <Text style={styles.projetos}>Trampo Certo 
                   </Text>
                   <Text style={styles.titulosProj}>GitHub
                   </Text>
@@ -69,6 +69,12 @@ class App extends Component{
 export default App;
 
 const styles = StyleSheet.create({
+
+  tituloPrincipal: {
+    color: 'white',
+    fontSize: 25,
+    margin: 15
+  },
 
   titulos: {
     color: 'white',
