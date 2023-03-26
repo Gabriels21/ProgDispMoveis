@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, StatusBar,} from 'react-native';
 
@@ -8,7 +9,7 @@ class App extends Component{
       <ScrollView style={styles.scrollView}>
       <View style={{backgroundColor: 'black', height:980}}>
 
-            <View style={{alignItems:'center', justifycontetnt: 'center', marginTop: 25}}>
+            <View style={{alignItems:'center', justifycontetnt: 'center', marginTop: 2}}>
               <Text style={styles.tituloPrincipal}>Meu Perfil</Text>
             </View>
 
@@ -33,7 +34,7 @@ class App extends Component{
 
             <Text style={styles.titulos}>
             Formação:</Text>
-              <View style={{margin: 5, height:180, backgroundColor: 'black', borderColor:'white', borderWidth:5, borderRadius: 15}}>
+              <View style={{margin: 5, height:175, backgroundColor: 'black', borderColor:'white', borderWidth:5, borderRadius: 15}}>
                   <Text style={styles.titulosForm}>ETEC Itanháem 
                   </Text>
                   <Text style={styles.formacao}>ETIM-Informática para Internet 2018-2020 
@@ -47,7 +48,7 @@ class App extends Component{
 
             <Text style={styles.titulos}>
             Projetos:</Text>
-              <View style={{margin: 5, height:180, backgroundColor: 'black', borderColor:'white', borderWidth:5, borderRadius: 15}}>
+              <View style={{margin: 5, height:155, backgroundColor: 'black', borderColor:'white', borderWidth:5, borderRadius: 15}}>
                   <Text style={styles.titulosProj}>TCC 
                   </Text>
                   <Text style={styles.projetos}>Trampo Certo 
