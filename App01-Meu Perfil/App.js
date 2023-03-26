@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, StatusBar,} from 'react-native';
 
@@ -7,7 +6,7 @@ class App extends Component{
     return(
       <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
-      <View style={{backgroundColor: 'black', height:980}}>
+      <View style={{backgroundColor: 'black', height:930}}>
 
             <View style={{alignItems:'center', justifycontetnt: 'center', marginTop: 2}}>
               <Text style={styles.tituloPrincipal}>Meu Perfil</Text>
@@ -21,7 +20,7 @@ class App extends Component{
             </View>
 
             <Text style={styles.titulos}>
-            Dados pessoais:</Text>
+            Dados Pessoais:</Text>
               <View style={{margin: 5, height:120, backgroundColor: 'black', borderColor:'white', borderWidth:5, borderRadius: 15}}>
                   <Text style={styles.dadosPessoais}>Nome: Gabriel dos Santos Santana 
                   </Text>
