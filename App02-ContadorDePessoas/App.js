@@ -20,12 +20,12 @@ export default function App(){
       <View style={styles.container}>
         <View style={styles.containerContador}>
 
-          <Text style={{fontSize: 35, textAlign: 'center', fontWeight: 'bold', marginBottom: 5}}>
+          <Text style={{fontSize: 20, textAlign: 'center', justifyContent: 'center', fontWeight: 'bold', marginBottom: 5}}>
             Contador de Pessoas
           </Text>
 
           <View style={styles.containerVisor}>
-            <Text style={{fontSize: 100, color: '#DCDCDC', textAlign: 'center'}}>
+            <Text style={{fontSize: 80, color: '#DCDCDC', textAlign: 'center'}}>
               {pessoas}
             </Text>
           </View>
@@ -83,11 +83,11 @@ const styles = StyleSheet.create({
    justifyContent: 'center',
   },
   containerVisor:{
-   backgroundColor:'black',
-   width:130,
-   height:130,
+   backgroundColor:'#181818',
+   width:150,
+   height:150,
    marginBottom: 10,
-    marginLeft: 140,
+   marginLeft: 130,
    alignItems: 'center',
    justifyContent: 'center',
    borderRadius: 30
