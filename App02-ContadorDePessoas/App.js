@@ -1,56 +1,102 @@
-import React, { Component } from 'react';
-import { View, Text, Button} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Pressable, StyleSheet} from 'react-native';
 
 
-class App extends Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      pessoas: 0
-    };
-
-    this.mais = this.mais.bind(this);
-    this.menos = this.menos.bind(this);
-  }
+export default function App(){
   
-  mais(){
-    this.setState({
-      pessoas: this.state.pessoas + 1
-    });
+  const [pessoas, setPessoas] = useState(0);
+  
+  function mais(){
+    setPessoas(pessoas + 1)
   }
 
-  menos(){
-     if(this.state.pessoas > 0){
-    this.setState({
-     pessoas: this.state.pessoas - 1
-    });
+  function menos(){
+     if(pessoas > 0){
+       setPessoas(pessoas - 1)
      }
   }
 
-
-  render(){
     return(
+      <View style={styles.container}>
+        <View style={styles.containerContador}>
 
-      
-      <View style={{ marginTop: 50 }}>
+          <Text style={{fontSize: 35, textAlign: 'center', fontWeight: 'bold', marginBottom: 5}}>
+            Contador de Pessoas
+          </Text>
 
-        <Text style={{fontSize: 35, textAlign: 'center'}}>
-          Contador de Pessoas
-        </Text>
+          <View style={styles.containerVisor}>
+            <Text style={{fontSize: 100, color: '#DCDCDC', textAlign: 'center'}}>
+              {pessoas}
+            </Text>
+          </View>
 
-        <Text style={{fontSize: 100, color: 'red', textAlign: 'center'}}>
-          {this.state.pessoas}
-        </Text>
+          <View style={styles.containerButton}>
+                  <Pressable style={styles.button} onPress={mais}>
+                    <Text style={styles.text}>+</Text>
+                  </Pressable>
+          </View>
 
-        <Button color ='green' title="+" onPress={this.mais}/>
+          <View style={styles.containerButton}>
+                  <Pressable style={styles.button2} onPress={menos}>
+                    <Text style={styles.text}>-</Text>
+                  </Pressable>
+          </View>
         
-        <Button color ='red' title="-" onPress={this.menos} />
-
-
+        </View>
       </View>
     )
-  }
 }
 
+const styles = StyleSheet.create({
+   container:{
+     flex: 1,
+     backgroundColor: '#DCDCDC'
+   },
+    containerContador:{
+     marginTop: 270
+   },
+   button:{
+    width: 380,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 5,
+    paddingHorizontal: 5,
+    borderRadius: 5,
+    elevation: 2,
+    backgroundColor: 'green',
+    marginBottom: 5
+  },
+  button2:{
+    width: 380,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 5,
+    paddingHorizontal: 5,
+    borderRadius: 5,
+    elevation: 2,
+    backgroundColor: 'red',
+  },
+  containerButton:{
+   alignItems: 'center',
+   justifyContent: 'center',
+  },
+  containerVisor:{
+   backgroundColor:'black',
+   width:130,
+   height:130,
+   marginBottom: 10,
+    marginLeft: 140,
+   alignItems: 'center',
+   justifyContent: 'center',
+   borderRadius: 30
+  },
+  text:{
+    fontSize: 20,
+    color: 'white'
+  }
 
-export default App;
+})
+
+
