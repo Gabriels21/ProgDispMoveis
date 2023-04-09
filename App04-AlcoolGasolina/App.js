@@ -1,37 +1,30 @@
-import React, { Component } from 'react';
-import { View, Text, StyleSheet, TextInput, Button, Image, Pressable} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, Image, Pressable} from 'react-native';
 import { styles } from './styles';
 
-class App extends Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      resultado: '',
-      alcool: 0,
-      gasolina: 0,
-    };
-    
-    this.calcular = this.calcular.bind(this);
-  }
+export default function App(){
+  
+  const [resultado, setResultado] = useState('');
+  const [alcool, setAlcool] = useState(0);
+  const [gasolina, setGasolina] = useState(0);
 
-  calcular(){
+  function calcular(){
 
-    if ( (this.state.alcool === '') || (this.state.gasolina === '') ){
+    if ( (alcool === '') || (gasolina === '') ){
       alert('É necessário digitar os valores!')
       return;
     }
 
-    res = this.state.alcool / this.state.gasolina
+    res = alcool / gasolina;
 
     if(res < 0.7){
-    this.setState({resultado: 'Resultado: '+ res + ' é melhor utilizar Álcool'});
+      setResultado('Álcool');
     }else{
-      this.setState({resultado: 'Resultado: '+ res + ' é melhor utilizar Gasolina'});
+      setResultado('Gasolina');
     }
 
   }
 
-  render(){
     return(
       <View style={styles.area}>
 
@@ -46,30 +39,32 @@ class App extends Component{
       <TextInput
       style={styles.inputA}
       placeholder="Digite o preço do Álcool"
-      onChangeText={ (valor) => this.setState({alcool: valor})}
+      onChangeText={ (valor) => setAlcool(valor)}
       keyboardType="numeric"
       />
 
       <TextInput
       style={styles.inputB}
       placeholder="Digite o preço da gasolina"
-      onChangeText={ (valor) => this.setState({gasolina: valor})}
+      onChangeText={ (valor) => setGasolina(valor)}
       keyboardType="numeric"
       />
 
       <View style={styles.containerButton}>
-        <Pressable style={styles.button} onPress={this.calcular}>
+        <Pressable style={styles.button} onPress={calcular}>
           <Text style={styles.text}>Verificar</Text>
         </Pressable>
       </View>
 
       <View style={styles.containerTexto}>
-              <Text style={styles.texto}> {this.state.resultado} </Text>
+              <Text style={styles.texto}> {resultado} </Text>
       </View>
       
       </View>
     );
   }
-}
 
-export default App;
+
+
+
+
