@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, StatusBar,} from 'react-native';
+import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView} from 'react-native';
 
-class App extends Component{
-  render(){
+export default function App(){
     return(
       <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
@@ -63,10 +62,6 @@ class App extends Component{
     </SafeAreaView>
     )
   }
-}
-
-
-export default App;
 
 const styles = StyleSheet.create({
 
