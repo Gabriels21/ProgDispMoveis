@@ -4,7 +4,10 @@ const styles = StyleSheet.create({
   
   container:{
     flex: 1,
-    
+    backgroundColor: 'white'
+  },
+  containerConteudo:{
+    marginTop: 130
   },
   containerImagem:{
     alignItems:'center',
@@ -13,8 +16,9 @@ const styles = StyleSheet.create({
   },
   inputA:{
     height: 45,
-    borderWidth: 1,
-    borderColor: '#008000',
+    borderWidth: 2,
+    borderColor: '#ff7f50',
+    borderRadius: 5,
     placeholderTextColor: "#008000",
     margin: 10,
     fontSize: 20,
@@ -22,8 +26,9 @@ const styles = StyleSheet.create({
   },
   inputB:{
     height: 45,
-    borderWidth: 1,
-    borderColor: '#ff0000',
+    borderWidth: 2,
+    borderColor: '#ff7f50',
+    borderRadius: 5,
     placeholderTextColor: "#ff0000",
     margin: 10,
     fontSize: 20,
@@ -62,7 +67,7 @@ const styles = StyleSheet.create({
   titulo:{
     fontSize: 35,
     marginTop: 20,
-    color: '#b0c4de',
+    color: '#ff7f50',
     fontWeight: 'bold',
     alignSelf: 'center'
   },
