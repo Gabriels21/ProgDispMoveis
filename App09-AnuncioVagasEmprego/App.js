@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, ScrollView, Image, Text,Pressable } from 'react-native';
+import { View, StyleSheet, ScrollView, Text,Pressable } from 'react-native';
 import { styles } from './styles';
 
 export default function App(){
     return(
 
       <View style={styles.container}>
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+        <ScrollView style={styles.scrollV}>
+
+          <View style={styles.tituloP}>
+            <Text style={styles.titulo1}>VagasTI.com</Text>
+          </View>
 
           <View style={styles.box}>
-            <Text style={styles.titulo}>Scrum Master</Text>
+
+            <View style={styles.viewTitulo}>
+              <Text style={styles.titulo}>Scrum Master</Text>
+            </View>
+
              <View style={styles.labelV}>
                 <Text style={styles.empresa}>Empresa</Text>
                 <Text style={styles.texto}>Google</Text>
@@ -17,7 +25,7 @@ export default function App(){
             
              <View style={styles.labelV}>
                 <Text style={styles.desc}>Descrição</Text>
-                <Text style={styles.textoDesc}>Ser um Scrum Master em um projeto.</Text>
+                <Text style={styles.textoDesc}>Ser um Scrum Master em um projeto que está sendo desennvolvido.</Text>
              </View>
 
              <View style={styles.labelV}>
@@ -39,7 +47,11 @@ export default function App(){
           </View>
 
           <View style={styles.box}>
-            <Text style={styles.titulo}>Desenvolvedor Mobile</Text>
+
+             <View style={styles.viewTitulo}>
+              <Text style={styles.titulo}>Desenvolvedor Mobile</Text>
+            </View>
+
              <View style={styles.labelV}>
                 <Text style={styles.empresa}>Empresa</Text>
                 <Text style={styles.texto}>Microsoft</Text>
@@ -68,7 +80,11 @@ export default function App(){
           </View>
 
           <View style={styles.box}>
-            <Text style={styles.titulo}>Analista de Dados</Text>
+
+            <View style={styles.viewTitulo}>
+              <Text style={styles.titulo}>Analista de Dados</Text>
+            </View>
+
              <View style={styles.labelV}>
                 <Text style={styles.empresa}>Empresa</Text>
                 <Text style={styles.texto}>IBM</Text>
@@ -96,7 +112,9 @@ export default function App(){
              </View>
           </View>
 
+          <View style={styles.ajuste}>
+          </View>
         </ScrollView>
       </View>
     )
-}
+} 

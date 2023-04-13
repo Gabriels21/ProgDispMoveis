@@ -1,34 +1,49 @@
+
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container:{
     flex: 1,
-    backgroundColor:'#121212',
-    paddingTop: 120
+    backgroundColor:'#FFE551',
   },
    box:{
-    marginLeft: 15,
-    marginRight: 15,
-    backgroundColor: '#4F4F4F',
+    backgroundColor: '#F2F2E9',
     borderColor: 'black',
-    borderRadius:8,
-    height: 550,
-    width: 400,
-    padding: 50
+    borderRadius: 15,
+    height: 500,
+    width: 370,
+    padding: 25,
+    marginBottom: 10,
+    marginTop: 10
+  },
+  tituloP:{
+    alignItems: 'center'
+  },
+  titulo1:{
+    fontSize: 35,
+    lineHeight: 100,
+    fontWeight: 'bold',
+    letterSpacing: 0.25,
+    color: 'black',
+    alignItems: 'center'
+  },
+  viewTitulo:{
+    alignItems: 'center'
   },
   titulo:{
     fontSize: 20,
     lineHeight: 25,
     fontWeight: 'bold',
     letterSpacing: 0.25,
-    color: 'white',
+    color: 'black',
     marginBottom: 15,
     alignItems: 'center',
-    marginLeft: 40,
-    marginTop: -18
+    marginTop: -18,
+    padding: 5
   },
   textButton:{
-     color: 'white',
+     fontSize: 18,
+     color: 'black',
      fontWeight: 'bold',
   },
    button:{
@@ -37,72 +52,78 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 25,
-    backgroundColor: '#008000',
+    backgroundColor: '#F2D22E',
   },
   containerButton:{
-    marginLeft: -1,
+    alignItems: 'center',
     marginTop: 10
   },
   empresa: {
-    backgroundColor: '#121212',
+    backgroundColor: '#FFE551',
     fontSize: 18,
     padding: 10,
     fontWeight: 'bold',
     borderRadius: 5,
-    color: 'white',
+    color: 'black',
   },
   texto: {
     marginLeft: 5,
     marginTop: 5,
     fontSize: 20,
-    color: '#fff',
+    color: 'black',
   },
   desc: {
-    backgroundColor: '#121212',
+    backgroundColor: '#FFE551',
     fontSize: 18,
     padding: 10,
     fontWeight: 'bold',
     borderRadius: 5,
-    color: 'white',
+    color: 'black',
   },
   textoDesc: {
     marginLeft: 5,
     marginTop: 5,
     fontSize: 18,
-    color: 'white',
+    color: 'black',
   },
   salario: {
-    backgroundColor: '#121212',
+    backgroundColor: '#FFE551',
     fontSize: 18,
     padding: 10,
     fontWeight: 'bold',
     borderRadius: 5,
-    color: 'white',
+    color: 'black',
   },
   textoSalario: {
     marginLeft: 5,
     marginTop: 5,
     fontSize: 20,
-    color: 'white',
+    color: 'black',
   },
   requisitos:{
-    backgroundColor: '#121212',
+    backgroundColor: '#FFE551',
     fontSize: 18,
     padding: 10,
     fontWeight: 'bold',
     borderRadius: 5,
-    color: 'white',
+    color: 'black',
   },
   textoRequisitos: {
     marginLeft: 5,
     marginTop: 5,
     fontSize: 20,
-    color: 'white',
+    color: 'black',
   },
   labelV:{
     marginTop: 2,
     marginBottom: 10
   },
+  scrollV: {
+  alignItems: 'center',
+  },
+  ajuste:{
+    marginTop: 30
+  }
 })
 
 export {styles};
